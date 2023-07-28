@@ -1,0 +1,20 @@
+{
+  "name": "@zipper-inc/client-js",
+  "version": "0.1.1",
+  "description": "An easy way to interact with Zipper Applets from anywhere that supports ESM, CommonJS, or TypeScript.",
+  "main": "./dist/script/index.js",
+  "types": "./dist/types/index.d.ts",
+  "author": "Zipper",
+  "license": "MIT",
+  "scripts": {
+    "build": "deno task build",
+    "dev": "deno task watch"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/zipper-inc/client-js.git"
+  },
+  "bugs": {
+    "url": "https://github.com/zipper-inc/client-js.git"
+  }
+}

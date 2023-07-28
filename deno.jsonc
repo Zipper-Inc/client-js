@@ -1,0 +1,17 @@
+{
+  "tasks": {
+    "build": "deno test -A; deno run -A ./bin/build.ts",
+    "watch": "deno run -A ./bin/watch.ts"
+  },
+  "lint": {
+    "exclude": ["dist/"]
+  },
+  "test": {
+    "exclude": ["dist/"]
+  },
+  "fmt": {
+    "lineWidth": 80,
+    "singleQuote": true,
+    "exclude": ["dist/"]
+  }
+}
