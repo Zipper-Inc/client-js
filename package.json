@@ -1,6 +1,6 @@
 {
   "name": "@zipper-inc/client-js",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "An easy way to interact with Zipper Applets from anywhere that supports ESM, CommonJS, or TypeScript.",
   "main": "./dist/script/index.js",
   "types": "./dist/types/index.d.ts",
