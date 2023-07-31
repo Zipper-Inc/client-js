@@ -2,7 +2,7 @@
 import {
   build as buildNodePackage,
   emptyDir,
-} from 'https://deno.land/x/dnt@0.32.0/mod.ts';
+} from 'https://deno.land/x/dnt@0.38.0/mod.ts';
 import pkgJson from '../package.json' assert { type: 'json' };
 
 const { name, version, description, author, license, repository, bugs } =
