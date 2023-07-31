@@ -17,9 +17,15 @@ export async function build() {
   await buildNodePackage({
     entryPoints: [ENTRY_POINT],
     outDir: OUT_DIR,
+    /**
+     * Note
+     * Any shims must be both Node & Web compatible
+     */
     shims: {
-      deno: true,
-      undici: true,
+      deno: { test: true },
+    },
+    compilerOptions: {
+      lib: ['DOM', 'ES2021'],
     },
     package: {
       name,
