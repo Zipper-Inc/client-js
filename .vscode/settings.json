@@ -2,5 +2,5 @@
   "deno.enable": true,
   "deno.enablePaths": ["./bin", "./src", "./mod.ts"],
   "editor.formatOnSave": true,
-  "editor.defaultFormatter": "denoland.vscode-deno"
+  "[typescript]": { "editor.defaultFormatter": "denoland.vscode-deno" }
 }
