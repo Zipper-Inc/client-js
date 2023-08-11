@@ -12,6 +12,7 @@
   "fmt": {
     "lineWidth": 80,
     "singleQuote": true,
+    "include": ["**/*.ts", "**/*.tsx", "**/*.json", "**/*.jsonc"],
     "exclude": ["dist/"]
   }
 }
