@@ -81,6 +81,18 @@ Anything an applet can do, your app can do.
 For more about Zipper, check out the
 [official documentation here](https://zipper.dev/docs).
 
+## Issues
+
+Zipper is under active development, so issues are expected! It might be helpful to use the debug mode to console log verbosely so you can see whats going on. 
+
+Just pass the `debug` option when initializing your applet to turn this one.
+
+```
+const myApp = initApplet('my-applet', { debug: true });
+```
+
+Let us know what your console output looks like when submitting an issue. PRs are also always welcome, see the next section.
+
 ## Contributing
 
 Zipper is under active development, so contributions are always welcome.
@@ -95,8 +107,8 @@ curl -fsSL https://deno.land/install.sh | sh
 Check out other ways to
 [install Deno here](https://github.com/denoland/deno_install).
 
-Once that's installed check out this repo locally, make some changes, and make
-passes tests and build.
+Once that's installed check out this repo locally, make some changes, and make sure it
+passes tests and builds by running the following command.
 
 ```
 deno task build
