@@ -37,6 +37,8 @@ export type AppletOptions = {
   debug?: boolean;
   overrideHost?: string;
   token?: string;
+  zipperRunUrl?: string;
+  prefeerHtps?: boolean;
 };
 
 /**
