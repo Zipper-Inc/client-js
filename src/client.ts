@@ -19,7 +19,7 @@ class Applet implements ZipperRunClient {
       indentifier,
       options?.overrideHost,
       options?.zipperRunUrl,
-      options?.prefeerHtps,
+      options?.preferHtps,
     );
     this.isDebugMode = !!options?.debug;
     if (options?.token) this.token = options.token;
