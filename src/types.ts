@@ -30,7 +30,6 @@ export type Inputs = { [key: string]: Serializable | undefined };
 
 export type Output = Serializable | void;
 
-
 type Protocol = 'http' | 'https';
 type Port = number;
 /**
@@ -39,7 +38,9 @@ type Port = number;
 export type AppletOptions = {
   debug?: boolean;
   token?: string;
-  overrideZipperRunUrl?: `${Protocol}://${string}` | `${Protocol}://${string}:${Port}`;
+  overrideZipperRunUrl?:
+    | `${Protocol}://${string}`
+    | `${Protocol}://${string}:${Port}`;
 };
 
 /**

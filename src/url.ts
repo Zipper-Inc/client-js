@@ -20,22 +20,24 @@ export function getBaseUrlFromIndentifier(
     }
 
     url = new URL(identifier);
-    
+
     // In this case, identifier is a full URL
     if (overrideZipperRunUrl) {
       const override = new URL(overrideZipperRunUrl);
       const subdomain = url.host.split('.')[0];
-      const newUrl = new URL(`${override.protocol}//${subdomain}.${override.host}`);
+      const newUrl = new URL(
+        `${override.protocol}//${subdomain}.${override.host}`,
+      );
       // Here, we gonna use the port from the override
-      return newUrl
+      return newUrl;
     }
-    
+
     return new URL(`${url.origin}${port || ''}`);
   } catch (_e) {
     // Identifier is not a URL, but if it looks like a host, we can add a protocol, other let's assume it's a slug
     url = /\.|:/.test(identifier)
-    ? new URL(`https://${identifier}`)
-    : new URL(`https://${identifier}.${DEFAULT_ZIPPER_DOT_RUN_HOST}`);
+      ? new URL(`https://${identifier}`)
+      : new URL(`https://${identifier}.${DEFAULT_ZIPPER_DOT_RUN_HOST}`);
   }
 
   // If we have an override, we need to use it, the identifier itself is our subdomain

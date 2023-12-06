@@ -30,7 +30,7 @@ Deno.test(function respectUrlWithPort() {
 Deno.test(function overrideZipperRunUrl() {
   const url = getBaseUrlFromIndentifier(
     'zipper-client-test',
-    'https://localdev.me:3002'
+    'https://localdev.me:3002',
   ).toString();
   assertEquals(url, 'https://zipper-client-test.localdev.me:3002/');
 });
@@ -38,16 +38,15 @@ Deno.test(function overrideZipperRunUrl() {
 Deno.test(function overrideWithoutPort() {
   const url = getBaseUrlFromIndentifier(
     'zipper-client-test',
-    'http://localdev.me'
+    'http://localdev.me',
   ).toString();
   assertEquals(url, 'http://zipper-client-test.localdev.me/');
 });
 
-
 Deno.test(function overrideFullUrl() {
   const url = getBaseUrlFromIndentifier(
     'https://zipper-client-test.zipper.run:3000/',
-    'http://localdev.me:8080'
+    'http://localdev.me:8080',
   ).toString();
   assertEquals(url, 'http://zipper-client-test.localdev.me:8080/');
 });
